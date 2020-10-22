@@ -3,9 +3,9 @@ const stringExpansion = str => {
    let newStr = []
    let num = 0
    let sym = ''
-   for (let char of str) {
-      isNaN(Number(char)) ? arr.push(char) : arr.push(+ char)      
-   }   
+   str.split('').forEach(char => {
+      isNaN(Number(char)) ? arr.push(char) : arr.push(+ char)
+   })
    arr.map(item => {  
       if (typeof item === 'string') { sym = item }
       if (typeof item === 'number') { num = item }  
